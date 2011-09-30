@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="../jsoner.js"></script>
+    <script type="text/javascript" src="../tester.js"></script>
+    <script type="text/javascript">
+	$(document).ready(function() {
+	    var j = jsoner();
+	    var t = tester();
+	    var str = j.convert("i'm a string");
+	    t.assert_equals(str, "i'm a string", "j.convert string test");
+	    var sres = j.parse(str);
+	    t.assert_equals(sres, "i'm a string", "j.parse string test");
+	    var json_object_being_tested = {var:"data"};
+	    var jsono = j.convert(json_object_being_tested);
+	    t.assert_equals(jsono, '{"var":"data"}', "j.convert obj test");
+	    jres = j.parse(jsono);
+	    t.assert_equals(jres, json_object_being_tested, "j.parse obj test (this shouldn't be failing)");
+	});
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

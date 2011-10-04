@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="../storage.js"></script>
+    <script type="text/javascript" src="../tester.js"></script>
+    <script type="text/javascript">
+	$(document).ready(function() {
+	    var t = tester();
+	    var s = localStorage;
+	    s.setItem("test", "one");
+	    s.setItem("test1", "two");
+	    s.setItem("test2", "three");
+	    var res = s.match();
+	    t.assert_equals(res.length, 3, "s.match() returned 3 results.");
+	    var res = s.match(/test/);
+	    t.assert_equals(res.length, 3, "s.match(/test/) returned 3 results.");
+	    var res = s.match(/test1/);
+	    t.assert_equals(res.length, 1, "s.match(/test1/) returned 1 results.");
+	});
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

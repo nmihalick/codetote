@@ -1,8 +1,10 @@
 {
-    "name": "app-name",
-    "description": "a brief description",
+    "name": "shoppinglist",
+    "description": "a shopping list application",
     "version": "0.0.1",
     "private": true,
     "dependencies": {
+	"mocha": "1.3.0",
+	"should": "1.0.0"
     }
 }

@@ -11,13 +11,16 @@
 var tester = function() {
     var that = {};
     that.assert_equals = function(t1, t2, n) {
+	var r = false;
 	if (t1 == t2) {
-	    var r = true;
+	    r = true;
 	}
-	else {
-	    var r = false;
-	    console.log(t1);
-	    console.log(t2);
+	this.write_result(n, r);
+    };
+    that.assert_true = function(t1, n) {
+	var r = false;
+	if (t1 === true) {
+	    r = true;
 	}
 	this.write_result(n, r);
     };

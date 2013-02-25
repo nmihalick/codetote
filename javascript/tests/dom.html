@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>bouncing balls</title>
+    <meta charset="utf-8"/>
+    <meta name = "viewport" content = "width = device-width">
+    <meta name = "viewport" content = "initial-scale = 1.0">
+    <style type="text/css">
+	body {
+	    border:3px solid black;
+	}
+	#outer { 
+	    width:200px;
+	    height:100px;
+	    border:1px solid black;
+	    position:relative;
+	}
+	#inner {
+	    width:10px;
+	    height:10px;
+	    background-color:red;
+	    position:absolute;
+	    top:10px;
+	    left:0px;
+	}
+    </style>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+	$(document).ready(function() {
+	    $('#inner').data('direction', 'right');
+	    function move() {
+		var direction = $('#inner').data('direction');
+		console.log(direction);
+		/*
+		direction = (direction == 'right') ? 'left' : 'right';
+		*/
+		var l = parseInt($('#inner').css('left'));
+		if (l === 0 && direction == 'left') {
+		    direction = 'right';
+		}
+		else if (l == 190 && direction == 'right') {
+		    direction = 'left';
+		}
+		if (direction == 'right') {
+		    $('#inner').css('left',
+			parseInt($('#inner').css('left'))+10);
+		}
+		else { 
+		    $('#inner').css('left',
+			parseInt($('#inner').css('left'))-10);
+		}
+		$('#inner').data('direction', direction);
+	    }
+	    setInterval(move, 1000);
+	});
+    </script>
+  </head>
+  <body>
+    <div id="outer">
+	<div id="inner"></div>
+    </div>
+  </body>
+</html>

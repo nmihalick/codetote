@@ -22,3 +22,11 @@ list branches:
 push to master:
 
     git push origin master
+
+update from master:
+    
+    git fetch origin master
+
+list remote repos
+    
+    git remote

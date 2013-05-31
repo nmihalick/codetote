@@ -1,0 +1,20 @@
+configuration file is typically located at:
+
+    /etc/nginx/nginx.conf
+
+Reload the configuration with:
+
+    kill -HUP `cat /usr/local/nginx/logs/nginx.pid`
+
+Start the server by running 
+
+    sudo /usr/sbin/nginx
+    
+The location of nginx.pid might be different on your machine. For Ubuntu, it
+is located at:
+
+    /var/run/nginx.pid
+
+restart the server
+
+    sudo /etc/init.d/nginx restart

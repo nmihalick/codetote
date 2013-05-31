@@ -1,0 +1,24 @@
+new branch:
+
+    git checkout -b branchname
+
+switch back to master from branch:
+
+    git checkout master
+
+merge to master:
+
+    git checkout master
+    git merge branchname
+
+delete branch:
+
+    git branch -d branchname
+
+list branches:
+
+    git branch -v
+
+push to master:
+
+    git push origin master

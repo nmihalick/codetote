@@ -1,3 +1,8 @@
 tote is a verb that means 'carry'. it is also a synonym of 'bag'. a bag is a
 container. a codetote on github is a container of code that can be carried
 everywhere i go.
+
+guidelines:
+
+Everything should be located in a project directory. I keep a journal file in
+each directory to use to remind me of things that I've done and learned.

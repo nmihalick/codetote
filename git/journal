@@ -30,3 +30,7 @@ update from master:
 list remote repos
     
     git remote
+
+clone from github
+
+    git clone https://github.com/username/reponame.git

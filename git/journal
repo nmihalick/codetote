@@ -34,3 +34,11 @@ list remote repos
 clone from github
 
     git clone https://github.com/username/reponame.git
+
+change the url of a remote
+
+    git remote set-url origin https://github.com/nmihalick/codetote.git
+
+pull and rebase changes from origin
+
+    git pull --rebase origin master

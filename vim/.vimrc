@@ -10,6 +10,7 @@ set history=50
 set ruler
 set showcmd
 set number
+set nowrap
 colorscheme desert
 syntax enable
 filetype plugin on
@@ -17,6 +18,8 @@ filetype plugin on
 set foldmethod=indent
 " i like the whole line to be highlighted
 set cursorline
+" smart case searching
+set smartcase
 
 "i want standard soft tabs everywhere.
 set softtabstop=4
@@ -34,6 +37,13 @@ set textwidth=80
 "mac Terminal requires some additions to be able to use this.
 set mouse=a
 
-"i want standard supertab turned on.
-let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
+"i want tab completion
+set wildmenu
+
+" i want to see more commands at the bottom of the window
+set cmdheight=2
+
+" paste toggle for indentless pasting.
+" http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
+set pastetoggle=<F2>
 

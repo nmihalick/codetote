@@ -18,3 +18,10 @@
 
     yum remove [name]
 
+= get version number
+
+    cat /etc/redhat-release
+
+= get hardware type
+
+    uname -m

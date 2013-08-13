@@ -25,3 +25,7 @@
 = get hardware type
 
     uname -m
+
+= restart apache (httpd)
+
+    /sbin/service httpd restart
